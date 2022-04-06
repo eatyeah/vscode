@@ -495,20 +495,21 @@ def ToAsciiChar(string_64_bits):
 
 
 if __name__ == "__main__":  
-    
+    '''
     print("执行DES加密算法")
     M="0000000100100011010001010110011110001001101010111100110111101111" #测试的明文
     K="0001001100110100010101110111100110011011101111001101111111110001" #密钥
     print("明文是" + M)
     print("加密后:" + Encryption(M, K))
     print("解密后" + Decryption(Encryption(M,K), K))
-    
+    '''
+
     print("【DES程序说明】")
     print("1. 明文文件默认为同目录下的plainText.txt，如需加密其他文件，请修改16到20行代码的文件变量。" )
     print("2. 密钥是随机生成的，保存在同目录的secretKey.txt文件中")
     print("3. 如果要显示加密和解密过程，可修改23行代码的打印变量，置为True")
     print("---------------------------------------------------------------------")
-    continueSign = input("请按任意键执行加密和解密过程。。。")
+    continueSign = input("请按任意键执行加密和解密过程")
     print("随机生成密钥中...")
     secretKey = createSecrteKey()
     with open(SECRET_KEY_FILE, 'w') as sf:
